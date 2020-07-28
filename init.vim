@@ -1,5 +1,4 @@
 call plug#begin("~/.vim/plugged")
-" Plug 'drewtempelmeyer/palenight.vim' " colorscheme
 Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -11,6 +10,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim' " fuzy and files
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 set number
@@ -27,10 +28,6 @@ if (has("nvim"))
  " for Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
-
-" syntax enable
-" set background=dark
-" colorscheme palenight
 
 colorscheme nord
 
