@@ -1,4 +1,5 @@
 call plug#begin("~/.vim/plugged")
+Plug 'dracula/vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -15,9 +16,15 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 set number
+set relativenumber
+
+" add copy/paste from comp register to vim
+set clipboard=unnamed
+set clipboard=unnamedplus
 
 map ä <C-}>
 map Ä <C-{>
@@ -33,7 +40,7 @@ if (has("nvim"))
 endif
 
 syntax enable
-colorscheme nord
+colorscheme dracula
 
 set smarttab
 set cindent
