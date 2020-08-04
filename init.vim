@@ -29,6 +29,9 @@ set clipboard=unnamedplus
 map ä <C-}>
 map Ä <C-{>
 
+inoremap kj <esc>
+inoremap jk <esc>
+
 " colorscheme
 if (has("termguicolors"))
 	set termguicolors
@@ -86,7 +89,6 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 " nerdtree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
 let g:NERDTreeIgnore = ['^node_modules$']
 let g:NERDTreeGitStatusWithFlags = 1
