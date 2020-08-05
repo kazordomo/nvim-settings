@@ -11,23 +11,28 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'junegunn/fzf.vim'
 Plug 'ctrlpvim/ctrlp.vim' " fuzy and files
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plug 'Yggdroot/indentLine'
+Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
 set number
 set relativenumber
 
+set encoding=UTF-8
+
 " add copy/paste from comp register to vim
 set clipboard=unnamed
 set clipboard=unnamedplus
 
-map ä <C-}>
-map Ä <C-{>
+map ö <C-}>
+map Ö <C-{>
 
 inoremap kj <esc>
 inoremap jk <esc>
@@ -50,7 +55,7 @@ set cindent
 set tabstop=2
 set shiftwidth=2
 " always uses spaces instead of tab characters
-set expandtab
+" set expandtab
 
 " go
 au FileType go set noexpandtab
