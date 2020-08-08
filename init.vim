@@ -20,6 +20,8 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 set number
@@ -116,3 +118,10 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " ctrlp
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" airline
+let g:airline_powerline_fonts = 1
+set t_Co=256
+
+" autoclose tags
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx'
