@@ -1,6 +1,5 @@
 call plug#begin("~/.vim/plugged")
 Plug 'dracula/vim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -8,12 +7,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
-Plug 'ctrlpvim/ctrlp.vim' " fuzy and files
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
@@ -22,6 +18,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
+Plug 'justinmk/vim-sneak'
+
+" UNUSED PLUGS
+" Plug 'dart-lang/dart-vim-plugin'
+" Plug 'arcticicestudio/nord-vim'
+
 call plug#end()
 
 set number
@@ -86,12 +88,13 @@ set splitbelow
 tnoremap <Esc> <C-\><C-n>
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
+" open terminal on ctrl+ö
 function! OpenTerminal()
   split term://bash
   resize 10
 endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
+" nnoremap <c-ö> :call OpenTerminal()<CR>
+nnoremap <C-ö> :call OpenTerminal()<CR>
 
 " nerdtree
 let g:NERDTreeShowHidden = 1
@@ -116,8 +119,8 @@ let g:coc_global_extensions = [
   \ ]
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-" ctrlp
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" fzf
+nnoremap <silent> <C-p> :Files<CR>
 
 " airline
 let g:airline_powerline_fonts = 1
@@ -125,3 +128,6 @@ set t_Co=256
 
 " autoclose tags
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx'
+
+" sneak
+let g:sneak#label = 1
