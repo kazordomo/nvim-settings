@@ -18,7 +18,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
-Plug 'justinmk/vim-sneak'
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
 
 " UNUSED PLUGS
 " Plug 'dart-lang/dart-vim-plugin'
@@ -35,8 +36,11 @@ set encoding=UTF-8
 set clipboard=unnamed
 set clipboard=unnamedplus
 
+" maps
 map ö <C-}>
 map Ö <C-{>
+map <c-q> :NERDTreeFind<CR>
+map <esc> :noh<CR>
 
 inoremap kj <esc>
 inoremap jk <esc>
@@ -112,6 +116,7 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-flutter',
+	\ 'coc-tslint-plugin',
   \ 'coc-tsserver',
   \ 'coc-eslint', 
   \ 'coc-prettier', 
@@ -128,6 +133,3 @@ set t_Co=256
 
 " autoclose tags
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx'
-
-" sneak
-let g:sneak#label = 1
