@@ -18,8 +18,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
-Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " UNUSED PLUGS
 " Plug 'dart-lang/dart-vim-plugin'
@@ -114,7 +114,6 @@ nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 " coc (intellisense/highlighing)
 let g:coc_global_extensions = [
   \ 'coc-snippets',
-  \ 'coc-pairs',
   \ 'coc-flutter',
 	\ 'coc-tslint-plugin',
   \ 'coc-tsserver',
