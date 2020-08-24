@@ -100,7 +100,8 @@ let g:coc_global_extensions = [
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " fzf
-nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <C-f> :Rg 
 
 " airline
 let g:airline_powerline_fonts = 1
