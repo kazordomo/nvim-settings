@@ -71,34 +71,10 @@ au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
 
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports" " autoimports
 let g:go_auto_type_info = 1 " display type in info-bar
 let g:go_addtags_transform = "snakecase" " :GoAddTags - add jsons in struct
-
-" terminal
-" open new split panes to right and below
-set splitright
-set splitbelow
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+ö
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-" nnoremap <c-ö> :call OpenTerminal()<CR>
-nnoremap <C-ö> :call OpenTerminal()<CR>
 
 " nerdtree
 let g:NERDTreeShowHidden = 1
